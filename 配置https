@@ -1,0 +1,15 @@
+# others
+安装certbot
+yum install epel-release -y
+yum install certbot-nginx -y
+certbot --nginx
+如果 certbot -nginx 这步出错，则执行
+
+pip install --upgrade --force-reinstall 'requests==2.6.0' urllib3
+重新执行 certbot --nginx
+
+配置自动更新证书
+certbot renew --dry-run
+
+
+https://certbot.eff.org/#ubuntuxenial-nginx
